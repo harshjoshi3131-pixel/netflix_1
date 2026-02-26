@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+   background: black;
+  color: white;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/e49aba81-ee7c-4f19-baef-7c54bbab003e/web/IN-en-20260202-TRIFECTA-perspective_04f5de39-b518-493c-9a8d-6aef11af0457_large.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero::before {
+  content:"";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,.4) 40%, rgba(0,0,0,.8) 100%);
+  z-index: 1;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3.125rem;
+}
+
+.logo {
+  height: 3.125rem;
+}
+
+.nav-right {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  margin: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown span {
+  border: 0.0625rem solid grey;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.language {
+  display: none;
+  position: absolute;
+  top: 2.1875rem;
+  right: 5;
+  background: rgba(246, 243, 243, 0.8);
+  padding: 0.625rem;
+  border-radius: 0.375rem;
+}
+
+.dropdown:hover .language {
+  display: block;
+}
+
+.language a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.375rem 0;
+  font-size: 0.875rem;
+}
+
+.language a:hover {
+  color: rgb(38, 87, 178);
+}
+
+.sign-in {
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.375rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.sign-in:hover{
+  background-color: rgb(234, 46, 8);
+  transform: scale(1.1);
+  transition: 0.1s all ease-in-out
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  max-width: 50rem;
+  padding: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.9375rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.email-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.email-box input {
+  padding: 0.9375rem;
+  width: 60%;
+  max-width: 25rem;
+  border-radius: 0.25rem;
+  border: 1;
+  font-size: 1rem;
+  opacity: 0.9;
+  background-color: rgb(29, 29, 29);
+}
+
+.email-box button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 0.9375rem 1.5625rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.email-box button:hover {
+  background-color: rgb(225, 85, 30);
+  transform: scale(1.1);
+  transition: 0.1s all ease-in-out
+}
+
+.trending {
+  padding: 3.75rem 2.5rem;
+}
+
+.trending-row {
+  display: flex;
+  gap: 2.875rem;
+  flex-wrap: wrap;          
+}
+
+.trending-row img{
+    border-radius: 0.625rem;
+}
+
+.movies {
+  position: relative;
+}
+
+.rank {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0.625rem;
+  font-size: 6.875rem;
+  font-weight: 900;
+  color: black;
+  -webkit-text-stroke: 0.125rem white;
+  z-index: 5;  
+  line-height: 1;
+}
+
+.movies img {
+  position: relative;
+  z-index: 3;
+}
+
+.trending-row img:hover{
+  box-shadow: whitesmoke;
+  transform: scale(1.1);
+  transition: 0.1s all ease-in-out;
+}
+
+.reasons {
+  padding: 3.75rem 2.5rem;
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  gap: 1.25rem;
+  height: 18.75rem;
+}
+
+.reason-card {
+  background: linear-gradient(345deg,rgba(115, 0, 48, 1) 0%, rgba(26, 31, 63, 1) 57%, rgba(26, 31, 63, 1) 100%);
+  padding: 1.875rem;
+  border-radius: 10%;
+  text-align: start;
+  font-size: 1.25rem;
+}
+
+.faq{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10.3rem;
+    padding-right: 10.3rem;
+    margin-top: 4rem;
+}
+
+.faq-title{
+    color: white;
+    font-size: 2.8rem;
+}
+
+.faq-rows{
+    margin-top: 1rem;
+    border: none;
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    height: 36vw;
+    gap: .8rem;
+}
+
+.box-row{
+    color: white;
+    background-color: #414141;
+    border: 0.0625rem solid black;
+    align-content: center;
+    font-size: 1.8vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+}
+
+details {
+  background:rgb(24, 23, 23);
+  margin-bottom: 0.625rem;
+  padding: 1.25rem;
+}
+
+summary {
+  font-size: 1.1rem;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 3.75rem 1.25rem;
+}
+
+.cta-text {
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+}
+
+last{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vw;
+    width: 56vw;
+    margin-top: 1rem;
+}
+
+.last-mail{
+    border-radius: 1vh;
+    font-size: 1.1vw;
+    width: 40.2vw;
+    height: 3.5vw;
+    padding: 1vw;
+    background-color: #140F0F;
+    border: .1rem solid white;
+    color: white;
+}
+
+#last-btn{
+    border: none;
+    background-color: #C11119;
+    border-radius: 1vh;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 1.8vw;
+    height: 3.5vw;
+    width: 15vw;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+  padding: 3.75rem 2.5rem;
+  background: black;
+  color: rgb(215, 192, 192);
+}
+
+.questions {
+  margin-bottom: 1.875rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6re;
+}
+
+.footer a {
+  color: rgb(191, 191, 191);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+  transition: 0.1s all ease-in-out;
+}
+
+.copyright-1{
+  font-size: 0.87rem;
+}
